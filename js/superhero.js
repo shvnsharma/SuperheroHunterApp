@@ -195,7 +195,10 @@ function saveToLocalStorage(data) {
 function checkForDuplicates(characterID) {
   let str = localStorage.getItem("favourites");
   let arr = JSON.parse(str);
-  //console.log("inside check for duplicates: " + arr);
+  console.log("inside check for duplicates: " + arr);
+  if (arr == null || arr.length == 0) {
+    return false;
+  }
   for (const iterator of arr) {
     //console.log(iterator.id);
     if (iterator.id == characterID) {

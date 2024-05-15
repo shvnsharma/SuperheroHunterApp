@@ -4,8 +4,8 @@ let arr;
 document.addEventListener("DOMContentLoaded", getFavouriteListFromLocalStorage);
 
 function getFavouriteListFromLocalStorage() {
-  //   console.log(location.href);
-  //   console.log(localStorage.getItem("favourites"));
+  console.log(location.href);
+  console.log(localStorage.getItem("favourites"));
   contentTag.innerHTML = "";
 
   if (JSON.parse(localStorage.getItem("favourites")).length == 0) {
