@@ -31,7 +31,7 @@ searchTagElement.addEventListener("keyup", (event) => {
 async function getSuperHerosByText(searchText) {
   try {
     const response = await fetch(
-      `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${searchText}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+      `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${searchText}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
     );
     if (!response.ok) {
       throw new Error("Network response was not okay.");
@@ -114,7 +114,7 @@ async function addToFavourites(event) {
   if (!checkForDuplicates(characterId)) {
     try {
       const response = await fetch(
-        `http://gateway.marvel.com//v1/public/characters/${characterId}?ts=${ts}&apikey=${publicKey}&hash=${hash}`
+        `https://gateway.marvel.com//v1/public/characters/${characterId}?ts=${ts}&apikey=${publicKey}&hash=${hash}`
       );
       if (!response.ok) {
         throw new Error("Network response was not okay.");
