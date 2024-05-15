@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Superhero-Hunter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="superhero.css" type="text/css" />
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./favicon.jpeg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          <h3>Superhero-Hunter</h3>
+        </a>
+        <button type="button" class="btn btn-danger">Favourites</button>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <nav style="--bs-breadcrumb-divider: ''" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html" style="color: burlywood">Home</a>
+          </li>
+          <li
+            class="breadcrumb-item active"
+            aria-current="page"
+            style="color: burlywood"
+          >
+            Favourites
+          </li>
+        </ol>
+      </nav>
+      <div class="row contents"></div>
+      <div class="row">
+        <div id="alert-container-fav" class="fixed-alert"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/favourites.js"></script>
+  </body>
+</html>
